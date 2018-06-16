@@ -1,5 +1,8 @@
 body {
-    background-image: url(../images/light_grey.jpg);
-    background-repeat: repeat;
+    background-color: darkslategrey !important;
 }
 
+#add-Train-btn {
+    background-color: darkslategrey !important;
+    border: 1px solid darkslategrey !important;
+}

@@ -10,7 +10,7 @@ var config = {
 
   database = firebase.database();
 
-  var trainName = "";
+  var name = "";
   var destination = "";
   var firstTrainTime = "";
   var frequency = "";
@@ -30,6 +30,18 @@ var config = {
         firstTrainTime: firstTrainTime,
         frequency: frequency,
       });
-    });    
+    });
+    
+    database.ref().on("child_added", function(childSnapshot){
+        console.log(childSnapshot.val().name);
+        console.log(childSnapshot.val().destination);
+        console.log(childSnapshot.val().firstTrainTime);
+        console.log(childSnapshot.val().frequency);
+
+        $("#train-table").append("<tr> <td> " + childSnapshot.val().name +
+        " </td> <td> " + childSnapshot.val().destination +
+        " </td> <td> " + childSnapshot.val().frequency +
+        " </td> <td> " + "THIS" + " </td> </tr>");
+    })
   
 
