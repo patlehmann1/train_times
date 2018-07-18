@@ -38,9 +38,7 @@ var config = {
       var timeFormat = "HH:mm";
       var convertedTime = moment(currentTrainTime, timeFormat);
       var displayedTime = moment(convertedTime).format("hh:mm A");
-
       var frequencyRate = childSnapshot.val().frequency;
-
       var firstTimeConverted = moment(currentTrainTime, "HH:mm").subtract(1, "years");
       var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
       var tRemainder = diffTime % frequencyRate;
