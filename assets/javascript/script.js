@@ -16,8 +16,6 @@ var config = {
   var firstTrainTime = "";
   var frequency = "";
 
-
-
   $("#add-Train-btn").on("click", function(event){
       event.preventDefault();
 
@@ -49,19 +47,7 @@ var config = {
       var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
       var tRemainder = diffTime % frequencyRate;
       var tMinutesTillTrain = frequencyRate - tRemainder;
-
-
-        console.log(childSnapshot.val().name);
-        console.log(childSnapshot.val().destination);
-        console.log(childSnapshot.val().firstTrainTime);
-        console.log(childSnapshot.val().frequency);
-
-        // minutes away from firstTrainTime
-
-        // firstTrainTime - current time = ??
-
         
-
         $("#train-table").append("<tr> <td> " + childSnapshot.val().name +
         " </td> <td> " + childSnapshot.val().destination +
         " </td> <td> " + childSnapshot.val().frequency +
