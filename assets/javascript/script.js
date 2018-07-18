@@ -21,9 +21,7 @@ var config = {
 
       name = $("#train-name-input").val().trim();
       destination = $("#destination-input").val().trim();
-      firstTrainTime = $("#time-input").val().trim();
-
-      
+      firstTrainTime = $("#time-input").val().trim(); 
       frequency = $("#rate-input").val().trim();
 
       database.ref().push({
